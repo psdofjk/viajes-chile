@@ -1,1 +1,5 @@
-El navbar puede cambiar de foto con una funcion que traiga la imagen del carrusel cada vez que se presione el boton
+el navbar necesita smooth scroll y enviar a distintas partes de la pagina
+la presentacion debe desaparecer en formatos pequeños
+hay que documentar los componentes de bootsrap y js usados
+hay que integrar js
+hay que subir el codigo a github

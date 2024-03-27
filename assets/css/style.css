@@ -4,20 +4,9 @@
     box-sizing: border-box;
 }
 
-.texto {
-  column-count: 3;
-  column-width: 200px;
-  column-gap: 20px;
-}
 
-.rectangulo {
-  width: 400px;
-  height: 25px;
-  border: 1px solid black;
-  
-}
 
-@media (max-width: 480px){
+@media (max-width: 576px){
   .rectangulo {
     width: 140px;
     height: 25px;
@@ -32,11 +21,33 @@
   
 }
 
-@media (max-width: 576px){
+@media (max-width: 768px){
   .rectangulo {
     width: 10x;
     height: 25px;
     border: 1px solid black;
     
 }
+.texto {
+  column-count: 2;
+  column-width: 2px;
+  column-gap: 2px;
+}
+
+}
+
+@media (min-width: 1200px){
+  .texto {
+    column-count: 3;
+    column-width: 200px;
+    column-gap: 20px;
+  }
+  
+  .rectangulo {
+    width: 400px;
+    height: 25px;
+    border: 1px solid black;
+    
+  }
+
 }
