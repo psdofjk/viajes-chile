@@ -12,9 +12,16 @@
     <!--font awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class=" rakkas-regular">
     <!--Hero section-->
         <!-- Navbar -->
+        <!--
+          Este navbar tiene varias cosas cambiadas:
+        *en boostrap 5 sin fixed top por alguna razon no se pone transparente
+        *le puse text-light a todo, si lo ponia solo en el container no se ponian todas las letras en blanco
+        *el button paso de navbar-light a navbar-dark 
+        * 
+        -->
         <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
           <div class="container-fluid container">
           <a class="navbar-brand logo text-light" href="#"><img src="assets/img/viajes.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -25,23 +32,24 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav ">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active text-light scroll" aria-current="page" href="#inicio">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Quienes somos</a>
+              <a class="nav-link active text-light scroll" aria-current="page" href="#quienes">Quienes somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Destacados</a>
+              <a class="scroll nav-link active text-light" aria-current="page" href="#destacados">Destacados</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="#">Contacto</a>
+              <a class="scroll nav-link active text-light" aria-current="page" href="#contacto">Contacto</a>
             </li>
             </ul>
           </div>
           </div>
         </nav>
         <!--carrousel-->
-        <div id="carouselExample" class="carousel slide">
+        <!-- el carrusel está vanilla, sin nada màs que las imagenes cambiadas-->
+        <div id="inicio" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
@@ -53,18 +61,22 @@
               <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
     <!--Quienes somos-->
+        <!--
+          cambios:
+          *los rectangulos están hechos con css y los volví responsivos con un @mediaquery
+        -->
         <!--titulo-->
-        <div class="text-light bg-black text-center py-5 quienes">¿QUIÈNES SOMOS?</div>
+        <div class="text-light bg-black text-center py-5 quienes" id="quienes">¿QUIÈNES SOMOS?</div>
       <!--texto-->
       <div class="bg-black">
       <div class="texto text-light bg-black container">
@@ -79,10 +91,16 @@
       </div>
     <!--Destacados-->
         <!--titulo-->
-        <div class="text-light bg-black text-center py-5">DESTACADOS</div>
+        <!--
+          cambios:
+        *hice que las cajas se centraran con d-flex y justify content
+        *todas tienen col-lg-2 col-md-5 col-10 para ser responsivos
+        *cambié los colores con text-light y bg-input 
+        -->
+        <div class="text-light bg-black text-center py-5" id="destacados">DESTACADOS</div>
       <!--cartas-->
       <div class=" row d-flex justify-content-center bg-black">
-        <div class="col-lg-2 col-md-6 mb-3">
+        <div class="col-lg-2 col-md-5 col-10 mb-3">
             <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="assets/img/card1.jpg" class="img-fluid" />
@@ -100,7 +118,7 @@
             </div>
         </div>
     
-        <div class="col-lg-2 col-md-6 mb-3">
+        <div class="col-lg-2 col-md-5 col-10 mb-3">
             <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
@@ -119,7 +137,7 @@
             </div>
         </div>
     
-        <div class="col-lg-2 col-md-6 mb-3">
+        <div class="col-lg-2 col-md-5 col-10 mb-3">
             <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="assets/img/card3.jpg" class="img-fluid" />
@@ -137,7 +155,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2 col-md-6 mb-3">
+        <div class="col-lg-2 col-md-5 col-10 mb-3">
             <div class="card">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img src="assets/img/card4.jpg" class="img-fluid" />
@@ -165,23 +183,34 @@
     
     <!--Contacto -->
       <!--titulo-->
-      <div class="text-light bg-black text-center py-5">CONTACTO</div>
+      <!--
+        cambios:
+      * le di un espacio al boton con css directo en la etiqueta
+      * cambié el input del mensaje por un textarea para que pudiera modificar los rows y hacerlo mas grande
+      * 
+      -->
+      <div class="text-light bg-black text-center py-5" >CONTACTO</div>
       <!--form-->
       <div class="bg-black text-light">
-      <form class="container">
+      <form class="container" id="contacto">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nombre</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="nombre" class="form-control" id="nombre" aria-describedby="nameHelp">
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Asunto</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input type="asunto" class="form-control" id="asunto">
         </div>
-        <label for="exampleInputEmail1" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-        <button type="submit" class="btn btn-primary text-white bg-info" style="margin-top: 15px; margin-bottom: 20px;">Enviar</button>
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="5"></textarea>
+        <button id="boton" type="submit" class="btn btn-primary text-white bg-info" style="margin-top: 15px; margin-bottom: 20px;">Enviar</button>
       </form>
       </div>
     <!--Footer-->
+    <!-- 
+      cambios:
+    * de li flex-sm-row para que fuera responsivo
+    * align-items-center + justify--content-between + 2 col-auto para que estuvieran distanciados
+    -->
     <footer class="bg-info py-4 mt-auto">
       <div class="container px-12">
           <div class="row align-items-center justify-content-between flex-column flex-sm-row">

@@ -1,4 +1,3 @@
-el navbar necesita smooth scroll y enviar a distintas partes de la pagina
 hay que documentar los componentes de bootsrap y js usados
 hay que integrar js
 hay que subir el codigo a github
