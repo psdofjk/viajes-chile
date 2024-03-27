@@ -6,35 +6,15 @@
 
 
 
-@media (max-width: 576px){
-  .rectangulo {
-    width: 140px;
-    height: 25px;
-    border: 1px solid black;
-    
-  }
+@media (max-width: 1200px){
   .texto {
-    column-count: 2;
-    column-width: 2px;
-    column-gap: 2px;
+    display: none;
   }
-  
+  .quienes {
+    display: none;
+  }
 }
 
-@media (max-width: 768px){
-  .rectangulo {
-    width: 10x;
-    height: 25px;
-    border: 1px solid black;
-    
-}
-.texto {
-  column-count: 2;
-  column-width: 2px;
-  column-gap: 2px;
-}
-
-}
 
 @media (min-width: 1200px){
   .texto {
